@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Box, Center, Spacer, Stack } from "@chakra-ui/react"
 import { useWallet } from '@solana/wallet-adapter-react'
-import NavBar from "../components/Navbar"
+import NavBar from "../components/NavBar"
 import Disconnected from '../components/Disconnected'
 import Connected from '../components/Connected'
 import styles from '../styles/Home.module.css'
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <Box
         w="full"
         h="calc(100vh)"
-        bgImage={connected ? "" : "url(/home-background.svg)"}
+        background={connected ? "url(/home-background.svg)" : "url(/home-background.svg)"}
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">

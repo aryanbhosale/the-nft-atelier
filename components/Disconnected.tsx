@@ -9,18 +9,20 @@ const Disconnected: FC = () => {
     const modalState = useWalletModal()
     const { wallet, connect } = useWallet()
 
-  const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
-    (event) => {
-      if (event.defaultPrevented) {
-        return
-      }
-
-      if(!wallet) {
-        modalState.setVisible(true)
-      } else {
-        connect().catch(() => {})
-      }
-    }, [connect, modalState, wallet])
+    const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
+      (event) => {
+        if (event.defaultPrevented) {
+          return
+        }
+  
+        if (!wallet) {
+          modalState.setVisible(true)
+        } else {
+          connect().catch(() => {})
+        }
+      },
+      [wallet, connect, modalState]
+    )
 
   return (
     <Container>

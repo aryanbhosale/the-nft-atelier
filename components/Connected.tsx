@@ -12,23 +12,24 @@ import { ArrowForwardIcon } from "@chakra-ui/icons"
 
 const Connected: FC = () => {
   return (
-    <VStack spacing={20}>
+    <VStack spacing={18}>
       <Container>
-        <VStack spacing={8}>
+        <VStack spacing={10}>
           <Heading
             color="white"
             as="h1"
+            width="10.8em"
             size="2xl"
             noOfLines={1}
             textAlign="center"
           >
-            Welcome Buildoor.
+            Welcome Connoisseur!
           </Heading>
 
           <Text color="bodyText" fontSize="xl" textAlign="center">
-            Each buildoor is randomly generated and can be staked to receive
-            <Text as="b"> $BLD</Text> Use your <Text as="b"> $BLD</Text> to
-            upgrade your buildoor and receive perks within the community!
+            Each Elysium is randomly generated and can be staked to receive
+            <Text as="b"> $LYSM</Text> Use your <Text as="b"> $LYSM</Text> to
+            upgrade your Elysium and receive perks within the community!
           </Text>
         </VStack>
       </Container>
@@ -43,7 +44,7 @@ const Connected: FC = () => {
 
       <Button bgColor="accent" color="white" maxW="380px">
         <HStack>
-          <Text>mint buildoor</Text>
+          <Text>mint elysium</Text>
           <ArrowForwardIcon />
         </HStack>
       </Button>
